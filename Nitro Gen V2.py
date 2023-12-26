@@ -1,6 +1,9 @@
 import requests
 import time
 import os
+import uuid
+
+# DO NOT GIVE TO ANYONE
 
 goob = True
 
@@ -23,7 +26,7 @@ while goob:
         'sec-fetch-site': 'cross-site',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0',
     }
-    data = '{"partnerUserId":"7515461c1e289882182c44ed6c884b5bd1c2e8ce61e93b14c1ca5d7d53c3d84b"}'
+    data = {"partnerUserId": str(uuid.uuid4())}
     response = requests.post(url, headers=headers, data=data)
     if response.status_code == 200:
         try:
