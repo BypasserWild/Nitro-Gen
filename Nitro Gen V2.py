@@ -2,8 +2,6 @@ import requests
 import time
 import os
 
-# DO NOT GIVE TO ANYONE
-
 goob = True
 
 codes = 0
